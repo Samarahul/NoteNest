@@ -1,0 +1,168 @@
+ /* General Reset and Font Setup */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #f9f9f9; /* Light gray background */
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  padding: 0 16px;
+}
+
+/* Header Styles */
+header {
+  background-color: #8AB4F8; /* Light blue */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+header h1 {
+  font-family: "McLaren", cursive;
+  font-size: 2em;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Footer Styles */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #8AB4F8; /* Light blue */
+  padding: 10px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Note Styles */
+.note {
+  background: #ffffff; /* White background for notes */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 10px;
+  width: 180px; /* Adjusted width */
+  height: 150px; /* Set a fixed height for uniformity */
+  transition: transform 0.2s ease-in-out;
+}
+
+.note:hover {
+  transform: scale(1.02);
+}
+
+.note h1 {
+  font-size: 1em; /* Adjusted font size */
+  color: #333333; /* Dark gray */
+  margin-bottom: 6px;
+}
+
+.note p {
+  font-size: 0.8em; /* Adjusted font size */
+  color: #666666; /* Medium gray */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Delete Button Style */
+.note button {
+  background: #FF9A8B; /* Soft peach */
+  border: none;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 30px; /* Decreased width */
+  height: 30px; /* Decreased height */
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.note button:hover {
+  background: #FF6F6F; /* Slightly darker peach */
+}
+
+/* Create Area Styles */
+form.create-note {
+  background: #ffffff; /* White background for form */
+  padding: 15px; /* Decreased padding */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto; /* Decreased margin */
+  max-width: 400px; /* Decreased width */
+  position: relative;
+}
+
+form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 8px; /* Decreased padding */
+  font-size: 0.9em; /* Decreased font size */
+  border-radius: 4px;
+  margin-bottom: 8px; /* Decreased margin */
+  outline: none;
+}
+
+form.create-note textarea {
+  resize: none;
+}
+
+form.create-note button {
+  position: absolute;
+  right: 10px; /* Adjusted position */
+  bottom: -10px;
+  background: #A2D9CE; /* Light teal */
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 36px; /* Decreased width */
+  height: 36px; /* Decreased height */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+form.create-note button:hover {
+  background: #7BBF9C; /* Slightly darker teal */
+}
+
+/* Search Bar Styles */
+.search-container {
+  margin: 20px 0;
+}
+
+.search-bar {
+  width: 200px; /* Decreased width */
+  padding: 8px; /* Decreased padding */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9em; /* Decreased font size */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+  display: block;
+}
+
+.search-bar:focus {
+  border-color: #007BFF; /* Highlight border on focus */
+}
+
+/* Notes Grid Layout */
+.notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between notes */
+  padding: 20px;
+}
